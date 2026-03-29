@@ -1,0 +1,62 @@
+<!-- 笔记详情弹窗 -->
+<div class="modal fade" id="activeNoteModal" tabindex="-1" data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="px-4 py-1 border border-top-1">
+                <div class="row">
+                    <div class="col-3 d-flex justify-content-start">
+                        <div class="btn-group">
+                            <div class="btn-group" role="group">
+                                <input type="radio" class="btn-check" name="noteView" id="editView" autocomplete="off">
+                                <label class="btn btn-outline-secondary" for="editView" title="编辑视图">
+                                    <span><!-- PLACEHOLDER: svg bi-pencil-square.svg --></span>
+                                </label>
+                                <input type="radio" class="btn-check" name="noteView" id="readTimeView"
+                                       autocomplete="off">
+                                <label class="btn btn-outline-secondary" for="readTimeView" title="实时视图">
+                                    <span><!-- PLACEHOLDER: svg bi-layout-split.svg --></span>
+                                </label>
+                                <input type="radio" class="btn-check" name="noteView" id="markdownView"
+                                       autocomplete="off">
+                                <label class="btn btn-outline-secondary" for="markdownView" title="MD视图">
+                                    <span><!-- PLACEHOLDER: svg bi-markdown.svg --></span>
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary ms-1" id="saveNoteBtn" title="保存">
+                                <span><!-- PLACEHOLDER: svg bi-save.svg --></span>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-center ms-3">
+                            <span id="noteChangedIcon" class="force-hidden d-flex align-items-center text-danger"
+                                  title="编辑未保存">
+                                <!-- PLACEHOLDER: svg bi-exclamation-circle.svg -->
+                            </span>
+                            <span id="noteSavedIcon" class="force-hidden d-flex align-items-center text-success"
+                                  title="编辑保存成功">
+                                <!-- PLACEHOLDER: svg bi-check-circle.svg -->
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center" id="noteTitleContainer">
+                    </div>
+                    <div class="col-3 d-flex justify-content-end">
+                        <button type="button" class="btn btn-outline-secondary" id="noteCloseBtn" title="关闭">
+                            <!-- PLACEHOLDER: svg bi-x-lg.svg -->
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body bg-body-tertiary">
+                <div class="row justify-content-md-center">
+                    <div class="col-11">
+                        <div class="note-content-container">
+                            <textarea class="note-content note-edit-content" id="activeNoteEditContent"
+                                      spellcheck="false"></textarea>
+                            <div class="note-content note-md-content" id="activeNoteMDContent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

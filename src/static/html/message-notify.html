@@ -1,0 +1,43 @@
+<!-- 告警弹窗 -->
+<div class="modal fade" data-bs-backdrop="static" id="alertModal" tabindex="-1" aria-labelledby="alertModalLabel"
+     data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="alertModalContent">
+            <!-- 内容动态生成 -->
+        </div>
+    </div>
+</div>
+
+<!-- 确认弹窗 -->
+<div class="modal fade" data-bs-backdrop="static" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
+     data-bs-keyboard="false" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body" id="confirmModalContent">
+                <!-- 内容动态生成 -->
+            </div>
+
+            <div class="modal-footer">
+                <button id="confirmModalCancelBtn" type="button" class="btn btn-sm btn-secondary"
+                        data-bs-dismiss="modal">取消
+                </button>
+                <button id="confirmModalSureBtn" type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">
+                    确定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 消息提醒 -->
+<!--<div class="toast-container position-fixed bottom-0 end-0 p-3">-->
+<div class="toast-container position-fixed p-3 top-0 start-50 translate-middle-x">
+    <div id="liveToast" class="" role="alert" aria-live="assertive" aria-atomic="true"
+         data-bs-delay="1000">
+        <div class="d-flex">
+            <div id="liveToastContent" class="toast-body">
+                <!-- 内容动态生成 -->
+            </div>
+        </div>
+    </div>
+</div>

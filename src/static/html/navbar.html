@@ -1,0 +1,106 @@
+<!-- 导航栏 -->
+<nav id="navbar" class="navbar bg-body-tertiary fixed-top shadow">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" title="设置">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="搜索笔记…" aria-label="Search"
+                   id="searchNotesInput" value="" disabled>
+            <button type="button" class="btn btn-outline-secondary" id="lockSafeNotesBtn">
+                <span id="lockSafeNotesIcon" hidden title="锁定">
+                    <!-- PLACEHOLDER: svg bi-lock-fill.svg -->
+                </span>
+                <span id="unlockSafeNotesIcon" title="解锁">
+                    <!-- PLACEHOLDER: svg bi-unlock-fill.svg -->
+                </span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary ms-2 new-note-btn" id="navbarNewNoteBtn" title="新增笔记" disabled>
+                <span>
+                    <!-- PLACEHOLDER: svg bi-plus-lg.svg -->
+                </span>
+            </button>
+            <div class="dropdown">
+                <button type="button" class="btn btn-outline-secondary ms-2" title="更多操作" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="moreOperationBtn" disabled>
+                    <span>
+                        <!-- PLACEHOLDER: svg bi-three-dots.svg -->
+                    </span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li id="openInGroupBtn" class="dropdown-item open-in-group-btn">分组打开</li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li id="pinNoteBtn" class="dropdown-item pin-note-btn">置顶笔记</li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li id="cancelSelectBtn" class="dropdown-item cancel-select-btn">取消选择</li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li id="cancelPinNoteBtn" class="dropdown-item cancel-pin-note-btn">取消置顶</li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li id="noteCopyBtn" class="dropdown-item note-copy-btn">创建副本</li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li id="noteDeleteBtn" class="dropdown-item note-delete-btn">删除笔记</li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvasNavbar" data-bs-keyboard="false"
+             aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title fw-bold d-flex align-items-center" id="offcanvasNavbarLabel">
+                    <!-- PLACEHOLDER: svg bi-gear.svg -->
+                    <span class="p-2">设置</span>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="list-group list-group-flush">
+                    <button type="button" class="list-group-item list-group-item-action d-flex align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#setNoteRepoModal">
+                        <!-- PLACEHOLDER: svg bi-database-gear.svg -->
+                        <span class="p-2">设置笔记库</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action d-flex align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#createNoteRepoModal">
+                        <!-- PLACEHOLDER: svg bi-database-add.svg -->
+                        <span class="p-2">创建笔记库</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action d-flex align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#changeRepoPwdModal" id="changeRepoPwdModalBtn"
+                            disabled>
+                        <!-- PLACEHOLDER: svg bi-key.svg -->
+                        <span class="p-2">更换密钥</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action d-flex align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#generalSetupModal">
+                        <!-- PLACEHOLDER: svg bi-grid.svg -->
+                        <span class="p-2">通用设置</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action d-flex align-items-center">
+                        <!-- PLACEHOLDER: svg bi-question-circle.svg -->
+                        <span class="p-2">使用帮助</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action d-flex align-items-center"
+                            data-bs-toggle="modal" data-bs-target="#aboutSafeNotesModal">
+                        <!-- PLACEHOLDER: svg bi-info-circle.svg -->
+                        <span class="p-2">关于</span>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action d-flex align-items-center"
+                            id="exitSafeNotes">
+                        <!-- PLACEHOLDER: svg bi-box-arrow-right.svg -->
+                        <span class="p-2">退出</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

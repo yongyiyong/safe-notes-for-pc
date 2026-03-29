@@ -1,0 +1,109 @@
+<!-- 设置笔记库弹窗 -->
+<div class="modal fade" data-bs-backdrop="static" id="setNoteRepoModal" tabindex="-1" data-bs-keyboard="false"
+     aria-labelledby="setNoteRepoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="setNoteRepoModalLabel">设置笔记库</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+            </div>
+
+            <div class="modal-body">
+                <!-- TODO 可以展示多个历史笔记库？ -->
+                <div class="input-group mb-3">
+                    <span class="input-group-text">选择文件</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" placeholder="选择笔记库文件…"
+                           id="selectNoteRepoInput" value="">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">解密密钥</span>
+                    <input type="password" class="form-control" aria-label="Sizing example input"
+                           aria-describedby="inputGroup-sizing-default" placeholder="输入笔记库解密密钥…"
+                           id="noteRepoPwdInput" value="">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelSetNoteRepoBtn">取消
+                </button>
+                <button type="button" class="btn btn-primary" id="setNoteRepoBtn" disabled>确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 创建笔记库弹窗 -->
+<div class="modal fade" data-bs-backdrop="static" id="createNoteRepoModal" tabindex="-1" data-bs-keyboard="false"
+     aria-labelledby="createNoteRepoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createNoteRepoModalLabel">创建笔记库</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">设置目录</span>
+                    <input type="text" class="form-control" id="newNoteRepoPath" value=""
+                           aria-describedby="inputGroup-sizing-default" placeholder="设置笔记库存放目录…">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">设置名称</span>
+                    <input type="text" class="form-control" id="newNoteRepoName" value=""
+                           aria-describedby="inputGroup-sizing-default" placeholder="设置笔记库名称…">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">设置密钥</span>
+                    <input type="password" class="form-control" id="newNoteRepoPwdInput" value=""
+                           aria-describedby="inputGroup-sizing-default" placeholder="设置笔记库密钥…">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">重复密钥</span>
+                    <input type="password" class="form-control" id="newNoteRepoRepeatPwdInput" value=""
+                           aria-describedby="inputGroup-sizing-default" placeholder="重复笔记库密钥…">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelCreateNoteRepoBtn">
+                    取消
+                </button>
+                <button type="button" class="btn btn-primary" id="createNoteRepoBtn" disabled>确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 修改笔记库密码弹窗 -->
+<div class="modal fade" data-bs-backdrop="static" id="changeRepoPwdModal" tabindex="-1" data-bs-keyboard="false"
+     aria-labelledby="changeRepoPwdModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changeRepoPwdModalLabel">更换笔记库密钥</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">更换密钥</span>
+                    <input type="password" class="form-control" id="changeRepoPwdInput" value=""
+                           aria-describedby="inputGroup-sizing-default" placeholder="设置笔记库新密钥…">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-text">重复密钥</span>
+                    <input type="password" class="form-control" id="changeRepoRepeatPwdInput" value=""
+                           aria-describedby="inputGroup-sizing-default" placeholder="重复笔记库新密钥…">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelChangeRepoPwdBtn">取消
+                </button>
+                <button type="button" class="btn btn-primary" id="changeRepoPwdBtn" disabled>确定</button>
+            </div>
+        </div>
+    </div>
+</div>

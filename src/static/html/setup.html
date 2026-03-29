@@ -1,0 +1,118 @@
+<!-- 通用设置弹窗 -->
+<div class="modal fade" data-bs-backdrop="static" id="generalSetupModal" tabindex="-1" data-bs-keyboard="false"
+     aria-labelledby="generalSetupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content ">
+            <div class="col-10 offset-md-1">
+                <div class="modal-body">
+                    <div class="card mb-3">
+                        <div class="card-header card-title fw-bold">
+                            笔记显示顺序
+                        </div>
+                        <div class="card-body">
+                            <select class="form-select" id="noteSortOrderSelect">
+                                <option value="time-desc">新笔记优先</option>
+                                <option value="time-asc">旧笔记优先</option>
+                                <option value="title-asc">笔记名A-Z</option>
+                                <option value="title-desc">笔记名Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header card-title fw-bold">
+                            笔记默认视图
+                        </div>
+                        <div class="card-body">
+                            <select class="form-select" id="noteDefaultView">
+                                <option value="edit">编辑视图</option>
+                                <option value="markdown">MD视图</option>
+                                <option value="real-time">实时视图</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header card-title fw-bold">
+                            自动锁定/退出
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">自动锁定时间</span>
+                                        <input type="number" min="30" class="form-control" id="setLockTimeout"
+                                               aria-describedby="inputGroup-sizing-default" value="">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="input-group">
+                                        <span class="input-group-text">自动退出时间</span>
+                                        <input type="number" min="60" class="form-control" id="setExitTimeout"
+                                               aria-describedby="inputGroup-sizing-default" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header card-title fw-bold">
+                            辅助功能
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                               id="enableAutoSaveNote">
+                                        <label class="form-check-label" for="enableAutoSaveNote">启用笔记自动保存</label>
+                                    </div>
+                                </div>
+                                <div class="col-5 d-flex">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                               id="enableRememberNoteOpenStatus">
+                                        <label class="form-check-label"
+                                               for="enableRememberNoteOpenStatus">记住笔记打开状态</label>
+                                    </div>
+                                    <span class="d-inline-flex align-items-center ms-2 hint-icon"
+                                          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-bg"
+                                          title="解锁笔记库后自动打开上次未关闭的笔记">
+                                        <!-- PLACEHOLDER: svg bi-question-circle.svg -->
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row pt-2">
+                                <div class="col-5 d-flex">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                               id="enablePreviewNoteCheck">
+                                        <label class="form-check-label" for="enablePreviewNoteCheck">启用笔记内容预览</label>
+                                    </div>
+                                    <span class="d-inline-flex align-items-center ms-2 hint-icon"
+                                          data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-bg"
+                                          title="在笔记清单界面显示部分笔记内容">
+                                        <!-- PLACEHOLDER: svg bi-question-circle.svg -->
+                                    </span>
+                                </div>
+                                <div class="col-5">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                               id="enableOpenRepoWithReadonly">
+                                        <label class="form-check-label"
+                                               for="enableOpenRepoWithReadonly">以只读方式打开笔记库</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="offcanvas"
+                            id="generalSetupBtn">确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
