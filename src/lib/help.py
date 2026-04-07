@@ -18,7 +18,6 @@ class Helper(object):
 
     def __init__(self):
         self._help_dir = resource_path("help")
-        self._version_file = f"{self._help_dir}/version.md"
         self._about_file = f"{self._help_dir}/about.md"
         self._manual_file = f"{self._help_dir}/manual.md"
 
@@ -27,10 +26,7 @@ class Helper(object):
         with open(file_path, "r", encoding="utf-8") as f:
             content = f.readlines()
 
-        return content
-
-    def version(self):
-        return self._read_file(self._version_file)
+        return "".join(content)
 
     def about(self):
         return self._read_file(self._about_file)

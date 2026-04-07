@@ -176,3 +176,7 @@ body {
     --bs-tooltip-bg: #495057;
     --bs-tooltip-color: #fff;
 }
+
+.help-content {
+    background-color: #f8f9fa
+}

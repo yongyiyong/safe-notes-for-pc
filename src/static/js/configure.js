@@ -31,8 +31,8 @@ class Configure {
     }
 
     #save() {
-        let autoLockTimeout = this.setLockTimeout.value;
-        let autoExitTimeout = this.setExitTimeout.value;
+        let autoLockTimeout = Number(this.setLockTimeout.value);
+        let autoExitTimeout = Number(this.setExitTimeout.value);
 
         if (autoExitTimeout < autoLockTimeout) {
             errorNotify("自动退出时间不能小于自动锁定时间！");

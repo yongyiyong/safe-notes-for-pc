@@ -27,6 +27,11 @@ function initTooltip() {
         .forEach(ele => new bootstrap.Tooltip(ele));
 }
 
+function setStaticInfo() {
+    GlobalHelper.setAbout();
+    GlobalHelper.setManual();
+}
+
 async function initializeEnvironment() {
     window.GlobalHelper = new Helper();
     window.GlobalConfig = new Configure();
@@ -48,5 +53,6 @@ async function initializeEnvironment() {
     window.GlobalExitNotifyTimer = null;
     window.GlobalSafeNote = new SafeNote();
 
+    setStaticInfo();
     initTooltip();
 }

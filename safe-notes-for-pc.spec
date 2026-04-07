@@ -8,12 +8,13 @@ block_cipher = None
 hiddenimports = collect_submodules('webview')
 
 a = Analysis(
-    ['main.py'],
+    ['src/main.py'],
     pathex=[os.getcwd()],
     binaries=[],
     datas=[
-        ('static', 'static'),
-        ('help', 'help'),
+        ('resources', 'resources'),
+        ('src/static', 'static'),
+        ('src/help', 'help'),
     ],
     hiddenimports=hiddenimports,
     hookspath=[],
@@ -46,7 +47,7 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    icon='app.ico',
+    icon='resources/icons/app.ico',
     console=False,  # GUI 程序必须 False
     disable_windowed_traceback=False,  # 程序出错时是否弹出错误信息
     target_arch=None,  # 打包目标平台，保持默认值即可

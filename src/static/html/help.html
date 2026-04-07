@@ -8,10 +8,32 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body help-content">
                 <div class="m-3">
-                    <p class="fw-bold">当前版本：</p>
-                    <span id="safeNotesVersion"></span>
+                    <div id="safeNotesAbout" class="note-md-content"></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Safe Notes 使用帮助弹窗 -->
+<div class="modal fade" data-bs-backdrop="static" id="safeNotesManualModal" tabindex="-1" data-bs-keyboard="false"
+     aria-labelledby="safeNotesManualModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">使用帮助</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭"></button>
+            </div>
+
+            <div class="modal-body help-content">
+                <div class="m-3">
+                    <div id="safeNotesManual" class="note-md-content"></div>
                 </div>
             </div>
 
