@@ -283,6 +283,10 @@ class NoteRepo {
                 e.preventDefault();
                 _this.searchNotesInput.focus();
             }
+            // Ctrl+T 返回导航栏顶部
+            if (e.ctrlKey && e.key === "t") {
+                SafeNote.scrollToTop();
+            }
             // Ctrl+L 锁定笔记库
             if (e.ctrlKey && e.key === "l") {
                 _this.lockNoteRepo();

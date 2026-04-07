@@ -42,7 +42,7 @@ class SafeNote {
 
     #setListeners() {
         // 双击导航栏返回顶部
-        this.navbar.addEventListener("dblclick", () => SafeNote.#scrollToTop());
+        this.navbar.addEventListener("dblclick", () => SafeNote.scrollToTop());
         this.exitSafeNotes.addEventListener("click", () => this.exit());
 
         // 监听用户活动，长时间不操作自动锁定退出
@@ -52,7 +52,7 @@ class SafeNote {
         });
     }
 
-    static #scrollToTop() {
+    static scrollToTop() {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
